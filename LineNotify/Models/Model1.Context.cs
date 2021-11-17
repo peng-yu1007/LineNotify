@@ -25,7 +25,7 @@ namespace LineNotify.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<dotor> dotor { get; set; }
-        public virtual DbSet<examiner> examiner { get; set; }
+        public virtual DbSet<Doctors> Doctors { get; set; }
+        public virtual DbSet<Examiners> Examiners { get; set; }
     }
 }

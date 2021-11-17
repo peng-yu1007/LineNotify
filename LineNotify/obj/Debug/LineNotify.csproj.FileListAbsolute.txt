@@ -86,7 +86,6 @@ C:\Users\user\source\repos\LineNotify\LineNotify\bin\zh-Hant\System.Web.WebPages
 C:\Users\user\source\repos\LineNotify\LineNotify\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
 C:\Users\user\source\repos\LineNotify\LineNotify\obj\Debug\LineNotify.csproj.AssemblyReference.cache
 C:\Users\user\source\repos\LineNotify\LineNotify\obj\Debug\LineNotify.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\LineNotify\LineNotify\obj\Debug\LineNotify.csproj.CopyComplete
 C:\Users\user\source\repos\LineNotify\LineNotify\obj\Debug\LineNotify.dll
 C:\Users\user\source\repos\LineNotify\LineNotify\obj\Debug\LineNotify.pdb
 C:\Users\ann02\LineNotify\LineNotify\bin\LineNotify.dll.config
@@ -179,3 +178,5 @@ C:\Users\ann02\LineNotify\LineNotify\obj\Debug\LineNotify.csproj.AssemblyReferen
 C:\Users\ann02\LineNotify\LineNotify\obj\Debug\LineNotify.csproj.CoreCompileInputs.cache
 C:\Users\ann02\LineNotify\LineNotify\obj\Debug\LineNotify.dll
 C:\Users\ann02\LineNotify\LineNotify\obj\Debug\LineNotify.pdb
+C:\Users\user\source\repos\LineNotify\LineNotify\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\user\source\repos\LineNotify\LineNotify\obj\Debug\LineNotify.csproj.CopyComplete

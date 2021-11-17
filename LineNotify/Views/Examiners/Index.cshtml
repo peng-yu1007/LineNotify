@@ -1,28 +1,81 @@
-﻿@{
-    ViewBag.Title = "Examiners Page";
+﻿@model IEnumerable<LineNotify.Models.Examiners>
+
+@{
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
+<h2>Index</h2>
 
-<style>
-    .d1 {
-        position: relative;
-        left: 1000px;
-        top: 0px;
-    }
-</style>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.patient_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.patient_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.test_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.test_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.test_value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.doctor_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Doctors.patient_name)
+        </th>
+        <th></th>
+    </tr>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div class="d1">
-        <p></p>
-        <p></p>
-        <p><a href="https://localhost:44323/Examiners/Add" class="btn btn-primary btn-lg">+輸入檢驗值</a></p>
-    </div>
-</body>
-</html>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.patient_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.patient_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.test_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.test_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.test_value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.doctor_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Doctors.patient_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
 
+</table>

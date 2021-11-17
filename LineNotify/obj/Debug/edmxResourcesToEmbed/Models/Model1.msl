@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="LineNotifyModelStoreContainer" CdmEntityContainer="LineNotifyEntities">
-    <EntitySetMapping Name="dotor">
-      <EntityTypeMapping TypeName="LineNotifyModel.dotor">
-        <MappingFragment StoreEntitySet="dotor">
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="LineNotifyModel.Doctors">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="patient_id" ColumnName="patient_id" />
           <ScalarProperty Name="patient_name" ColumnName="patient_name" />
           <ScalarProperty Name="gender" ColumnName="gender" />
@@ -14,9 +15,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="examiner">
-      <EntityTypeMapping TypeName="LineNotifyModel.examiner">
-        <MappingFragment StoreEntitySet="examiner">
+    <EntitySetMapping Name="Examiners">
+      <EntityTypeMapping TypeName="LineNotifyModel.Examiners">
+        <MappingFragment StoreEntitySet="Examiners">
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="patient_id" ColumnName="patient_id" />
           <ScalarProperty Name="patient_name" ColumnName="patient_name" />
           <ScalarProperty Name="gender" ColumnName="gender" />

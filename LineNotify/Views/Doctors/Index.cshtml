@@ -1,19 +1,75 @@
-﻿@{
-    ViewBag.Title = "Doctors Page";
+﻿@model IEnumerable<LineNotify.Models.Doctors>
+
+@{
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
+<h2>Index</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-        <p></p>
-        <p></p>
-        <p><a href="https://localhost:44323/Doctors/Add" class="btn btn-default btn-lg">+新增醫囑</a></p>
-    </div>
-</body>
-</html>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.patient_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.patient_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.test_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.test_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.doctor_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Examiners.patient_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.patient_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.patient_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.test_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.test_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.doctor_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Examiners.patient_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

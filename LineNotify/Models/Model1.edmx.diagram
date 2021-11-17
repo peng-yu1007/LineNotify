@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="47633aee85d44bd891e82ef404a7bca0" Name="Diagram1">
-        <EntityTypeShape EntityType="LineNotifyModel.dotor" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="LineNotifyModel.examiner" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="LineNotifyModel.FK_examiner_dotor" ManuallyRouted="false" />
+      <Diagram DiagramId="8dd640d951414fbab220d6a1b66a0ff5" Name="Diagram1">
+        <EntityTypeShape EntityType="LineNotifyModel.Doctors" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LineNotifyModel.Examiners" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="LineNotifyModel.FK_Examiners_Doctors" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
