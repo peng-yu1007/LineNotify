@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Orders</h2>
+<h2>醫囑</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("+新增醫囑", "Create", "Orders", new { @class = "btn btn-default" })
 </p>
 <table class="table">
     <tr>

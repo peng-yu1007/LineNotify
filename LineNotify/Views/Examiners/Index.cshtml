@@ -5,10 +5,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Examiners</h2>
+<style>
+    .d1 {
+        position: relative;
+        left: 1000px;
+        top: 0px;
+    }
+</style>
+
+<h2>檢驗報告</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("輸入檢驗值", "Create", "Examiners", new { @class = "d1" })
 </p>
 <table class="table">
     <tr>
