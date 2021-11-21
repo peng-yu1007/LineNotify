@@ -1,34 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="LineNotifyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Doctors">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="patient_id" Type="int" Nullable="false" />
-    <Property Name="patient_name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="gender" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="test_id" Type="int" Nullable="false" />
-    <Property Name="test_name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="date" Type="date" Nullable="false" />
-    <Property Name="doctor_name" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
   <EntityType Name="Examiners">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="test_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="test_value" Type="nvarchar(max)" />
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="order_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="patient_id" Type="int" Nullable="false" />
     <Property Name="patient_name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="gender" Type="nvarchar(max)" Nullable="false" />
     <Property Name="test_id" Type="int" Nullable="false" />
     <Property Name="test_name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="test_value" Type="nvarchar(max)" />
     <Property Name="date" Type="date" Nullable="false" />
     <Property Name="doctor_name" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
+  <Association Name="FK_Examiners_Orders">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+    <End Role="Examiners" Type="Self.Examiners" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Examiners">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="LineNotifyModelStoreContainer">
-    <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Examiners" EntityType="Self.Examiners" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Examiners_Orders" Association="Self.FK_Examiners_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Examiners" EntitySet="Examiners" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>
