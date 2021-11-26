@@ -180,4 +180,3 @@ C:\Users\ann02\LineNotify\LineNotify\obj\Debug\LineNotify.dll
 C:\Users\ann02\LineNotify\LineNotify\obj\Debug\LineNotify.pdb
 C:\Users\user\source\repos\LineNotify\LineNotify\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
 C:\Users\ann02\LineNotify\LineNotify\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
-C:\Users\ann02\LineNotify\LineNotify\obj\Debug\LineNotify.csproj.CopyComplete

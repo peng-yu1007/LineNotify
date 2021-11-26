@@ -21,6 +21,25 @@ namespace LineNotify.Controllers
             return View(examiners.ToList());
         }
 
+        public ActionResult Report(string ap, string bp, string cp, string dp, string ep, string fp, string gp, string hp, string ip, string jp, string kp, string lp, string mp,string zp)
+        {
+            ViewBag.ap = ap;
+            ViewBag.bp = bp;
+            ViewBag.cp = cp;
+            ViewBag.dp = dp;
+            ViewBag.ep = ep;
+            ViewBag.fp = fp;
+            ViewBag.gp = gp;
+            ViewBag.hp = hp;
+            ViewBag.ip = ip;
+            ViewBag.jp = jp;
+            ViewBag.kp = kp;
+            ViewBag.lp = lp;
+            ViewBag.mp = mp;
+            ViewBag.zp = zp;
+            return View("Report");
+        }
+
         // GET: Examiners/Details/5
         public ActionResult Details(int? id)
         {
