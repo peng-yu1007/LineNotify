@@ -46,7 +46,7 @@ namespace LineNotify.Controllers
         // 如需詳細資料，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,patient_id,patient_name,gender,test_id,test_name,date,doctor_name")] Orders orders)
+        public ActionResult Create([Bind(Include = "id,patient_id,patient_name,gender,test_id,test_name,date,doctor_name,birth_date,blood,diagnosis")] Orders orders)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace LineNotify.Controllers
         // 如需詳細資料，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,patient_id,patient_name,gender,test_id,test_name,date,doctor_name")] Orders orders)
+        public ActionResult Edit([Bind(Include = "id,patient_id,patient_name,gender,test_id,test_name,date,doctor_name,birth_date,blood,diagnosis")] Orders orders)
         {
             if (ModelState.IsValid)
             {

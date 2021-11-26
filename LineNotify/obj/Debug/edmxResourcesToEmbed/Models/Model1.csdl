@@ -24,6 +24,9 @@
     <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="doctor_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Examiners" Relationship="Self.FK_Examiners_Orders" FromRole="Orders" ToRole="Examiners" />
+    <Property Name="birth_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="blood" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="diagnosis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_Examiners_Orders">
     <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
