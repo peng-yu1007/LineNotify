@@ -31,6 +31,7 @@ namespace LineNotify.Models
         public System.DateTime birth_date { get; set; }
         public string blood { get; set; }
         public string diagnosis { get; set; }
+        public string id_card { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Examiners> Examiners { get; set; }

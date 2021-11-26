@@ -15,6 +15,7 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="LineNotifyModel.Orders">
         <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="id_card" ColumnName="id_card" />
           <ScalarProperty Name="diagnosis" ColumnName="diagnosis" />
           <ScalarProperty Name="blood" ColumnName="blood" />
           <ScalarProperty Name="birth_date" ColumnName="birth_date" />

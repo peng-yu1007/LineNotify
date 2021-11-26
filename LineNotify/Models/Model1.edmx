@@ -30,6 +30,7 @@
           <Property Name="birth_date" Type="date" Nullable="false" />
           <Property Name="blood" Type="nvarchar(max)" Nullable="false" />
           <Property Name="diagnosis" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="id_card" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <Association Name="FK_Examiners_Orders">
           <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
@@ -82,6 +83,7 @@
           <Property Name="birth_date" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="blood" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="diagnosis" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="id_card" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Examiners_Orders">
           <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
@@ -123,6 +125,7 @@
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="LineNotifyModel.Orders">
               <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="id_card" ColumnName="id_card" />
                 <ScalarProperty Name="diagnosis" ColumnName="diagnosis" />
                 <ScalarProperty Name="blood" ColumnName="blood" />
                 <ScalarProperty Name="birth_date" ColumnName="birth_date" />

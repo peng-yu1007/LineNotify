@@ -25,6 +25,7 @@
     <Property Name="birth_date" Type="date" Nullable="false" />
     <Property Name="blood" Type="nvarchar(max)" Nullable="false" />
     <Property Name="diagnosis" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_card" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <Association Name="FK_Examiners_Orders">
     <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
