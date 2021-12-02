@@ -57,7 +57,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.date)
+            @Convert.ToDateTime(Model.date).ToString("yyyy/MM/dd")
         </dd>
 
         <dt>
@@ -73,7 +73,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.birth_date)
+            @Convert.ToDateTime(Model.birth_date).ToString("yyyy/MM/dd")
         </dd>
 
         <dt>
