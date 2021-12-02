@@ -45,7 +45,7 @@
                 @Html.DisplayFor(modelItem => item.test_value)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.date)
+                @item.date.ToString("yyyy/MM/dd")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Orders.patient_name)
