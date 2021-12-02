@@ -1,0 +1,49 @@
+﻿@model IEnumerable<LineNotify.Models.Examiners>
+
+@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>EMR</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Orders.patient_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Orders.patient_name)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Orders.patient_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Orders.patient_name)
+            </td>
+            <td>
+                @Html.ActionLink("開啟電子病歷", "Report", new
+                {
+                    id = item.id,
+                    ap = item.Orders.patient_id,
+                    bp = item.Orders.patient_name,
+                    cp = item.Orders.gender,
+                    dp = item.Orders.test_id,
+                    fp = item.Orders.date.ToString("yyyy/MM/dd"),
+                    gp = item.Orders.doctor_name,
+                    hp = item.Orders.birth_date.ToString("yyyy/MM/dd"),
+                    ip = item.Orders.blood,
+                    jp = item.Orders.diagnosis,
+                    kp = item.test_value,
+                    lp = item.date.ToString("yyyy/MM/dd"),
+                    mp = item.test_name,
+                    zp = item.Orders.id_card
+                })
+            </td>
+        </tr>
+    }
+    </table>
